@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FB5558</color>
+
+    <color name="light_green">#77C8B2</color>
+    <color name="very_light_blue">#e2e7ed</color>
+    <color name="light_grey_blue">#b2b9c0</color>
+    <color name="light_grey_blue_two">#E8EAEC</color>
+
+    <color name="colorSplashAppName">@color/colorAccent</color>
+    <color name="colorSignInForgotPasswordText">@color/light_green</color>
+    <color name="colorButtonFilledActiveBackground">@color/colorAccent</color>
+    <color name="colorButtonFilledPassiveBackground">@color/very_light_blue</color>
+    <color name="white">#FFFFFF</color>
 </resources>

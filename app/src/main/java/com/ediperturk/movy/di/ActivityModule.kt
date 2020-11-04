@@ -1,8 +1,9 @@
 package com.ediperturk.movy.di
 
 import android.app.Activity
-import androidx.navigation.NavController
-import com.ediperturk.movy.common.extension.findNavController
+import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,7 +16,13 @@ object ActivityModule {
 
     @Provides
     @ActivityScoped
-    fun provideNavController(activity: Activity): NavController {
-        return activity.findNavController()
+    fun provideActivityContext(activity: Activity): Context {
+        return activity
+    }
+
+    @Provides
+    @ActivityScoped
+    fun provideFragmentManager(activity: AppCompatActivity): FragmentManager {
+        return activity.supportFragmentManager
     }
 }

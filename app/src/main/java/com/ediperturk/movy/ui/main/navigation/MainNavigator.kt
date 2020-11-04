@@ -1,4 +1,7 @@
 package com.ediperturk.movy.ui.main.navigation
 
-interface MainNavigator {
+import com.ediperturk.movy.ui.base.navigation.Navigator
+
+interface MainNavigator : Navigator {
+
 }

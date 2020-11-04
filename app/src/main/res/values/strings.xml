@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Movy</string>
+
+    <string name="sign_in_title">Welcome to Movy!</string>
+    <string name="sign_in_subtitle">Your personal guide to the world of cinema</string>
+    <string name="sign_in_username_text_input_hint">Email, phone number, username</string>
+    <string name="sign_in_password_text_input_hint">Password</string>
+    <string name="sign_in_forgot_password">Forgot your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in_tip">or continue with:</string>
+    <string name="sign_up_tip">Don\'t you have an account? SIGN UP</string>
+    <string name="sign_in_with_facebook">Facebook</string>
+    <string name="sign_in_with_google">Google</string>
 </resources>

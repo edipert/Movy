@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.ediperturk.movy.ui.signin.SignInViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.signin.SignInFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signInTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_title"
+            android:textAppearance="@style/FontStyle.Medium.24"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/topGuideline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signInSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_subtitle"
+            android:textAppearance="@style/FontStyle.Regular"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/signInTitle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/usernameEditTExt"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_text_input_height"
+            android:background="@drawable/background_input_text_default"
+            android:gravity="center_vertical"
+            android:hint="@string/sign_in_username_text_input_hint"
+            android:textAppearance="@style/FontStyle.Regular"
+            app:layout_constraintBottom_toTopOf="@id/passwordEditText"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/centerGuideline"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_text_input_height"
+            android:background="@drawable/background_input_text_default"
+            android:gravity="center_vertical"
+            android:hint="@string/sign_in_password_text_input_hint"
+            android:textAppearance="@style/FontStyle.Regular"
+            app:layout_constraintBottom_toTopOf="@id/signInForgotPassword"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/usernameEditTExt"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signInForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_forgot_password"
+            android:textAppearance="@style/FontStyle.Regular.12"
+            android:textColor="@color/colorSignInForgotPasswordText"
+            app:layout_constraintBottom_toTopOf="@id/sigInButton"
+            app:layout_constraintLeft_toLeftOf="@id/passwordEditText"
+            app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sigInButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_button_height"
+            android:background="@drawable/background_filled_button"
+            android:text="@string/sign_in"
+            android:textAllCaps="true"
+            android:textAppearance="@style/FontStyle.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/bottomGuideline"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toBottomOf="@id/signInForgotPassword" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signInTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in_tip"
+            android:textAppearance="@style/FontStyle.Regular.12"
+            android:textColor="@color/light_grey_blue"
+            app:layout_constraintBottom_toTopOf="@id/sigInFacebookButton"
+            app:layout_constraintLeft_toLeftOf="@id/sigInButton"
+            app:layout_constraintRight_toRightOf="@id/sigInButton"
+            app:layout_constraintTop_toBottomOf="@id/bottomGuideline"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sigInFacebookButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_white_button"
+            android:text="@string/sign_in_with_facebook"
+            android:textAllCaps="true"
+            android:textAppearance="@style/FontStyle.Medium"
+            app:layout_constraintBottom_toTopOf="@id/signUpTip"
+            app:layout_constraintLeft_toLeftOf="@id/leftGuideline"
+            app:layout_constraintRight_toLeftOf="@id/sigInGoogleButton"
+            app:layout_constraintTop_toBottomOf="@id/signInTip" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sigInGoogleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/background_white_button"
+            android:text="@string/sign_in_with_google"
+            android:textAllCaps="true"
+            android:textAppearance="@style/FontStyle.Medium"
+            app:layout_constraintLeft_toRightOf="@id/sigInFacebookButton"
+            app:layout_constraintRight_toRightOf="@id/rightGuideline"
+            app:layout_constraintTop_toTopOf="@id/sigInFacebookButton" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/signUpTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_tip"
+            android:textAppearance="@style/FontStyle.Regular.12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/sigInButton"
+            app:layout_constraintRight_toRightOf="@id/sigInButton"
+            app:layout_constraintTop_toBottomOf="@id/sigInFacebookButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
